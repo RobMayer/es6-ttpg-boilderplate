@@ -28,6 +28,10 @@ as above, but you don't need to edi the config/project.json
 * run ``yarn setup``
 * run ``yarn dev`` or ``yarn watch``
 
+# Transpiling
+
+by default, transpiling is off. If you would like to have babel transpile your code so that you can use Null Coalescence, Optional Chaining, Import/Export, private class properties, etc. set the "transpile" flag to true within ``config/project.json``
+
 # Bundling
 
 if you run ``yarn bundle`` it will package build your scripts from the ``src/`` folder, build the ``node_modules`` folder that TTPG will need, and take the contents of your ``assets/`` and throw it into a Zip file within ``bundles/``.
