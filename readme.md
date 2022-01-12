@@ -4,28 +4,29 @@ A way for you to bootstrap an ES6 project for Tabletop Playground within VSCode,
 
 # requirements
 
-Node v16,
-VSCode
-Yarn (can't use npm)
+* Node v16,
+* VSCode
+* Yarn (can't use npm)
 
 # Starting a new project
 
-run ``yarn install``
-edit ``config/project.json`` to reflect the values you want. "slug" is just the directory name, and there are two GUIDs - one for development, one for the production bundle (this way you can have them set along side each other).
-run ``yarn setup``
-run ``yarn dev`` (to build the scripts TTPG is looking at) or ``yarn watch`` (live updates on the saving of scripts)
-add and edit your scripts within the ``src/`` directory.
+* run ``yarn install``
+* edit ``config/project.json`` to reflect the values you want. "slug" is just the directory name, and there are two GUIDs - one for development, one for the production bundle (this way you can have them set along side each other).
+* run ``yarn setup``
+* run ``yarn dev`` (to build the scripts TTPG is looking at) or ``yarn watch`` (live updates on the saving of scripts)
+* add and edit your scripts within the ``src/`` directory.
 
-Any dependency you add with ``yarn add {module}`` will added to your bundles ``node_modules`` directory when you run ``yarn dev``
+Any dependency you add with ``yarn add {module}`` will be added to your bundles ``node_modules`` directory when you run ``yarn dev``
+
 Dependencies added with ``yarn add -D {module}`` (devDependenices) will ***not*** get bundled or built.
 
 # I've cloned my team's project that was based on this bootstrap, now what?
 
 as above, but you don't need to edi the config/project.json
 
-run ``yarn install``
-run ``yarn setup``
-run ``yarn dev`` or ``yarn watch``
+* run ``yarn install``
+* run ``yarn setup``
+* run ``yarn dev`` or ``yarn watch``
 
 # Bundling
 
