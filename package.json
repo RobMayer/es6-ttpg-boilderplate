@@ -5,6 +5,7 @@
   "scripts": {
     "setup": "node tooling/setup.js",
     "dev": "node tooling/builddev.js",
+    "build": "node tooling/buildprod.js",
     "watch": "node tooling/watch.js",
     "bundle": "node tooling/bundle.js",
     "clean": "node tooling/clean.js"

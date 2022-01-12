@@ -12,6 +12,9 @@
 # local build for development
 /dev
 
+# local build for production
+/prd
+
 # misc
 .DS_Store
 

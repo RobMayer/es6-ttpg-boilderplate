@@ -8,7 +8,9 @@ return Promise.all([
     fs.readJson("./config/project.json")
 ]).then(([localConfig, projectConfig]) => {
     return Promise.all([
+        fs.remove(`${localConfig.ttpg_folder}/${projectConfig.slug}`),
         fs.remove(`${localConfig.ttpg_folder}/${projectConfig.slug}_dev`),
+        fs.remove("./prd"),
         fs.remove("./dev"),
         fs.remove("./build")
     ])
