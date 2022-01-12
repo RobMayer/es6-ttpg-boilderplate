@@ -16,7 +16,7 @@ A way for you to bootstrap an ES6 project for Tabletop Playground within VSCode,
 * run ``yarn dev`` (to build the scripts TTPG is looking at) or ``yarn watch`` (live updates on the saving of scripts)
 * add and edit your scripts within the ``src/`` directory.
 
-Any dependency you add with ``yarn add {module}`` will added to your bundles ``node_modules`` directory when you run ``yarn dev``
+Any dependency you add with ``yarn add {module}`` will be added to your bundles ``node_modules`` directory when you run ``yarn dev``
 
 Dependencies added with ``yarn add -D {module}`` (devDependenices) will ***not*** get bundled or built.
 
