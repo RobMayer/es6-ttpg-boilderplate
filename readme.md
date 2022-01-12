@@ -4,9 +4,9 @@ A way for you to bootstrap an ES6 project for Tabletop Playground within VSCode,
 
 # requirements
 
-* Node v16,
-* VSCode
-* Yarn (can't use npm)
+* Node v16 https://nodejs.org/en/download/
+* Yarn https://yarnpkg.com/
+* Recommended: VSCode https://code.visualstudio.com/
 
 # Starting a new project
 
