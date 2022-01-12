@@ -61,14 +61,18 @@ const spawnDependencyDeploy = (config) => {
 }
 
 const spawnBuilder = (config) => {
-    return new Promise((resolve, reject) => {
-        const child = spawn.spawn("babel", [
-            "src",
-            "-d",
-            `prd/${config.slug}/Scripts`
-        ], { stdio: "pipe" });
-        child.on('close', code => code > 0 ? reject(code) : resolve())
-    });
+    if (config.transpile) {
+        return new Promise((resolve, reject) => {
+            const child = spawn.spawn("babel", [
+                "src",
+                "-d",
+                `prd/${config.slug}/Scripts`
+            ], { stdio: "pipe" });
+            child.on('close', code => code > 0 ? reject(code) : resolve())
+        });
+    } else {
+        return fs.copy("./src", `prd/${config.slug}/Scripts`);
+    }
 }
 
 fs.readJson("./config/project.json").then((config) => {

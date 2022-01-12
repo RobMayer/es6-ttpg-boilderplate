@@ -50,14 +50,18 @@ const buildZip = (config) => {
 }
 
 const spawnBuilder = (config) => {
-    return new Promise((resolve, reject) => {
-        const child = spawn.spawn("babel", [
-            "src",
-            "-d",
-            `build/Scripts`
-        ], { stdio: "pipe" });
-        child.on('close', code => code > 0 ? reject(code) : resolve())
-    });
+    if (config.transpile) {
+        return new Promise((resolve, reject) => {
+            const child = spawn.spawn("babel", [
+                "src",
+                "-d",
+                `build/Scripts`
+            ], { stdio: "pipe" });
+            child.on('close', code => code > 0 ? reject(code) : resolve())
+        });
+    } else {
+        return fs.copy("./src", `build/Scripts`);
+    }
 }
 
 Promise.all([

@@ -17,14 +17,18 @@ const spawnDependencyDeploy = (config) => {
 }
 
 const spawnBuilder = (config) => {
-    return new Promise((resolve, reject) => {
-        const child = spawn.spawn("babel", [
-            "src",
-            "-d",
-            `dev/${config.slug}_dev/Scripts`
-        ], { stdio: "pipe" });
-        child.on('close', code => code > 0 ? reject(code) : resolve())
-    });
+    if (config.transpile) {
+        return new Promise((resolve, reject) => {
+            const child = spawn.spawn("babel", [
+                "src",
+                "-d",
+                `dev/${config.slug}_dev/Scripts`
+            ], { stdio: "pipe" });
+            child.on('close', code => code > 0 ? reject(code) : resolve())
+        });
+    } else {
+        return fs.copy("./src", `dev/${config.slug}_dev/Scripts`);
+    }
 }
 
 fs.readJson("./config/project.json").then((config) => {
