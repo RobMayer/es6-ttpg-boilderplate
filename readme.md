@@ -1,12 +1,12 @@
-# what is this?
+# What is this?
 
-A way for you to bootstrap an ES6 project for Tabletop Playground within VSCode, as well as let you use ES6 and git more readily
+A way for you to bootstrap an Ecma2020 project for Tabletop Playground within VSCode, as well as let you use ES6 and git more readily
 
-# requirements
+# Requirements
 
-* Node v16,
-* VSCode
-* Yarn (can't use npm)
+* Node v16 https://nodejs.org/en/download/
+* Yarn https://yarnpkg.com/
+* Recommended: VSCode https://code.visualstudio.com/
 
 # Starting a new project
 
@@ -20,9 +20,9 @@ Any dependency you add with ``yarn add {module}`` will be added to your bundles 
 
 Dependencies added with ``yarn add -D {module}`` (devDependenices) will ***not*** get bundled or built.
 
-# I've cloned my team's project that was based on this bootstrap, now what?
+# Collaborating with an existing project.
 
-as above, but you don't need to edi the config/project.json
+Assuming someone else has cloned this template, and has set up the project as needed, it's pretty much as above, but you don't need to edi the config/project.json
 
 * run ``yarn install``
 * run ``yarn setup``
