@@ -1,6 +1,6 @@
 # What is this?
 
-A way for you to bootstrap an ES6 project for Tabletop Playground within VSCode, as well as let you use ES6 and git more readily
+A way for you to bootstrap an Ecma2020 project for Tabletop Playground within VSCode, as well as let you use ES6 and git more readily
 
 # Requirements
 
